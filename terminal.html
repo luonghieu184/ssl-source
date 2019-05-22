@@ -1,0 +1,744 @@
+<pre><font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ deb http://ch.archive.ubuntu.com/ubuntu/ trusty main restricted universe
+
+Command &apos;deb&apos; not found, did you mean:
+
+  command &apos;den&apos; from snap den (1.2.0-0)
+  command &apos;dub&apos; from snap dub (1.15.0)
+  command &apos;dub&apos; from deb dub
+  command &apos;edb&apos; from deb edb-debugger
+  command &apos;dab&apos; from deb bsdgames
+  command &apos;debi&apos; from deb devscripts
+  command &apos;dex&apos; from deb dex
+  command &apos;xdeb&apos; from deb xdeb
+  command &apos;derb&apos; from deb icu-devtools
+  command &apos;deb3&apos; from deb quilt
+  command &apos;debc&apos; from deb devscripts
+  command &apos;dep&apos; from deb go-dep
+
+See &apos;snap info &lt;snapname&gt;&apos; for additional versions.
+
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ clear
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ sudo status apache2
+[sudo] password for hieu: 
+sudo: status: command not found
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ sudo systemctl status apache2
+Unit apache2.service could not be found.
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ sudo apt update
+Ign:1 http://dl.google.com/linux/chrome/deb stable InRelease
+Hit:2 http://dl.google.com/linux/chrome/deb stable Release                                                                 
+Hit:4 http://security.ubuntu.com/ubuntu bionic-security InRelease   <font color="#C4A000">                                                       </font>
+Hit:5 http://ppa.launchpad.net/certbot/certbot/ubuntu bionic InRelease   
+Hit:6 http://vn.archive.ubuntu.com/ubuntu bionic InRelease                                          
+Hit:7 http://vn.archive.ubuntu.com/ubuntu bionic-updates InRelease       <font color="#C4A000">                           </font>
+Hit:8 http://ppa.launchpad.net/daniruiz/flat-remix/ubuntu bionic InRelease
+Get:9 http://vn.archive.ubuntu.com/ubuntu bionic-backports InRelease [74,6 kB]                      
+Ign:10 http://ppa.launchpad.net/ubuntu-vn/ppa/ubuntu bionic InRelease<font color="#C4A000">                                           </font>
+Err:11 http://ppa.launchpad.net/ubuntu-vn/ppa/ubuntu bionic Release<font color="#C4A000">           </font>
+  404  Not Found [IP: 91.189.95.83 80]
+Reading package lists... Done
+E: The repository &apos;http://ppa.launchpad.net/ubuntu-vn/ppa/ubuntu bionic Release&apos; does not have a Release file.
+N: Updating from such a repository can&apos;t be done securely, and is therefore disabled by default.
+N: See apt-secure(8) manpage for repository creation and user configuration details.
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ sudo apt update
+Hit:1 http://security.ubuntu.com/ubuntu bionic-security InRelease                      
+Hit:2 http://vn.archive.ubuntu.com/ubuntu bionic InRelease<font color="#C4A000">                             </font>
+Hit:3 http://vn.archive.ubuntu.com/ubuntu bionic-updates InRelease
+Get:4 http://vn.archive.ubuntu.com/ubuntu bionic-backports InRelease [74,6 kB]
+Fetched 74,6 kB in 3s (26,7 kB/s)<font color="#C4A000">   </font>
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+5 packages can be upgraded. Run &apos;apt list --upgradable&apos; to see them.
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ sudo apt install apache2
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  apache2-bin apache2-data apache2-utils libapr1 libaprutil1 libaprutil1-dbd-sqlite3 libaprutil1-ldap liblua5.2-0
+Suggested packages:
+  apache2-doc apache2-suexec-pristine | apache2-suexec-custom
+The following NEW packages will be installed:
+  apache2 apache2-bin apache2-data apache2-utils libapr1 libaprutil1 libaprutil1-dbd-sqlite3 libaprutil1-ldap liblua5.2-0
+0 upgraded, 9 newly installed, 0 to remove and 5 not upgraded.
+Need to get 1.713 kB of archives.
+After this operation, 6.920 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://vn.archive.ubuntu.com/ubuntu bionic/main amd64 libapr1 amd64 1.6.3-2 [90,9 kB]
+Get:2 http://vn.archive.ubuntu.com/ubuntu bionic/main amd64 libaprutil1 amd64 1.6.1-2 [84,4 kB]
+Get:3 http://vn.archive.ubuntu.com/ubuntu bionic/main amd64 libaprutil1-dbd-sqlite3 amd64 1.6.1-2 [10,6 kB]
+Get:4 http://vn.archive.ubuntu.com/ubuntu bionic/main amd64 libaprutil1-ldap amd64 1.6.1-2 [8.764 B]
+Get:5 http://vn.archive.ubuntu.com/ubuntu bionic/main amd64 liblua5.2-0 amd64 5.2.4-1.1build1 [108 kB]
+Get:6 http://vn.archive.ubuntu.com/ubuntu bionic-updates/main amd64 apache2-bin amd64 2.4.29-1ubuntu4.6 [1.072 kB]
+Get:7 http://vn.archive.ubuntu.com/ubuntu bionic-updates/main amd64 apache2-utils amd64 2.4.29-1ubuntu4.6 [83,5 kB]
+Get:8 http://vn.archive.ubuntu.com/ubuntu bionic-updates/main amd64 apache2-data all 2.4.29-1ubuntu4.6 [160 kB]
+Get:9 http://vn.archive.ubuntu.com/ubuntu bionic-updates/main amd64 apache2 amd64 2.4.29-1ubuntu4.6 [95,1 kB]
+Fetched 1.713 kB in 5s (318 kB/s)<font color="#C4A000">  </font>
+Selecting previously unselected package libapr1:amd64.
+(Reading database ... 304851 files and directories currently installed.)
+Preparing to unpack .../0-libapr1_1.6.3-2_amd64.deb ...
+Unpacking libapr1:amd64 (1.6.3-2) ...
+Selecting previously unselected package libaprutil1:amd64.
+Preparing to unpack .../1-libaprutil1_1.6.1-2_amd64.deb ...
+Unpacking libaprutil1:amd64 (1.6.1-2) ...
+Selecting previously unselected package libaprutil1-dbd-sqlite3:amd64.
+Preparing to unpack .../2-libaprutil1-dbd-sqlite3_1.6.1-2_amd64.deb ...
+Unpacking libaprutil1-dbd-sqlite3:amd64 (1.6.1-2) ...
+Selecting previously unselected package libaprutil1-ldap:amd64.
+Preparing to unpack .../3-libaprutil1-ldap_1.6.1-2_amd64.deb ...
+Unpacking libaprutil1-ldap:amd64 (1.6.1-2) ...
+Selecting previously unselected package liblua5.2-0:amd64.
+Preparing to unpack .../4-liblua5.2-0_5.2.4-1.1build1_amd64.deb ...
+Unpacking liblua5.2-0:amd64 (5.2.4-1.1build1) ...
+Selecting previously unselected package apache2-bin.
+Preparing to unpack .../5-apache2-bin_2.4.29-1ubuntu4.6_amd64.deb ...
+Unpacking apache2-bin (2.4.29-1ubuntu4.6) ...
+Selecting previously unselected package apache2-utils.
+Preparing to unpack .../6-apache2-utils_2.4.29-1ubuntu4.6_amd64.deb ...
+Unpacking apache2-utils (2.4.29-1ubuntu4.6) ...
+Selecting previously unselected package apache2-data.
+Preparing to unpack .../7-apache2-data_2.4.29-1ubuntu4.6_all.deb ...
+Unpacking apache2-data (2.4.29-1ubuntu4.6) ...
+Selecting previously unselected package apache2.
+Preparing to unpack .../8-apache2_2.4.29-1ubuntu4.6_amd64.deb ...
+Unpacking apache2 (2.4.29-1ubuntu4.6) ...
+Setting up libapr1:amd64 (1.6.3-2) ...
+Processing triggers for ufw (0.36-0ubuntu0.18.04.1) ...
+Processing triggers for ureadahead (0.100.0-21) ...
+Setting up apache2-data (2.4.29-1ubuntu4.6) ...
+Processing triggers for libc-bin (2.27-3ubuntu1) ...
+Setting up libaprutil1:amd64 (1.6.1-2) ...
+Processing triggers for systemd (237-3ubuntu10.21) ...
+Processing triggers for man-db (2.8.3-2ubuntu0.1) ...
+Setting up liblua5.2-0:amd64 (5.2.4-1.1build1) ...
+Setting up libaprutil1-ldap:amd64 (1.6.1-2) ...
+Setting up libaprutil1-dbd-sqlite3:amd64 (1.6.1-2) ...
+Setting up apache2-utils (2.4.29-1ubuntu4.6) ...
+Setting up apache2-bin (2.4.29-1ubuntu4.6) ...
+Setting up apache2 (2.4.29-1ubuntu4.6) ...
+Enabling module mpm_event.
+Enabling module authz_core.
+Enabling module authz_host.
+Enabling module authn_core.
+Enabling module auth_basic.
+Enabling module access_compat.
+Enabling module authn_file.
+Enabling module authz_user.
+Enabling module alias.
+Enabling module dir.
+Enabling module autoindex.
+Enabling module env.
+Enabling module mime.
+Enabling module negotiation.
+Enabling module setenvif.
+Enabling module filter.
+Enabling module deflate.
+Enabling module status.
+Enabling module reqtimeout.
+Enabling conf charset.
+Enabling conf localized-error-pages.
+Enabling conf other-vhosts-access-log.
+Enabling conf security.
+Enabling conf serve-cgi-bin.
+Enabling site 000-default.
+Created symlink /etc/systemd/system/multi-user.target.wants/apache2.service → /lib/systemd/system/apache2.service.
+Created symlink /etc/systemd/system/multi-user.target.wants/apache-htcacheclean.service → /lib/systemd/system/apache-htcacheclean.service.
+Job for apache2.service failed because the control process exited with error code.
+See &quot;systemctl status apache2.service&quot; and &quot;journalctl -xe&quot; for details.
+invoke-rc.d: initscript apache2, action &quot;start&quot; failed.
+<font color="#EF2929"><b>●</b></font> apache2.service - The Apache HTTP Server
+   Loaded: loaded (/lib/systemd/system/apache2.service; enabled; vendor preset: enabled)
+  Drop-In: /lib/systemd/system/apache2.service.d
+           └─apache2-systemd.conf
+   Active: <font color="#EF2929"><b>failed</b></font> (Result: exit-code) since Wed 2019-05-22 21:26:14 +07; 5ms ago
+  Process: 9534 ExecStart=/usr/sbin/apachectl start <font color="#EF2929"><b>(code=exited, status=1/FAILURE)</b></font>
+
+Thg 5 22 21:26:14 localhost apachectl[9534]: AH00558: apache2: Could not reliably determine the server&apos;s fully qualified domain name, using 127.0.0.1. Set the &apos;ServerName&apos; directive globally to suppress this message
+Thg 5 22 21:26:14 localhost apachectl[9534]: (98)Address already in use: AH00072: make_sock: could not bind to address [::]:80
+Thg 5 22 21:26:14 localhost apachectl[9534]: (98)Address already in use: AH00072: make_sock: could not bind to address 0.0.0.0:80
+Thg 5 22 21:26:14 localhost apachectl[9534]: no listening sockets available, shutting down
+Thg 5 22 21:26:14 localhost apachectl[9534]: AH00015: Unable to open logs
+Thg 5 22 21:26:14 localhost apachectl[9534]: Action &apos;start&apos; failed.
+Thg 5 22 21:26:14 localhost apachectl[9534]: The Apache error log may have more information.
+Thg 5 22 21:26:14 localhost systemd[1]: <b>apache2.service: Control process exited, code=exited status=1</b>
+Thg 5 22 21:26:14 localhost systemd[1]: <b>apache2.service: Failed with result &apos;exit-code&apos;.</b>
+Thg 5 22 21:26:14 localhost systemd[1]: <font color="#EF2929"><b>Failed to start The Apache HTTP Server.</b></font>
+Processing triggers for libc-bin (2.27-3ubuntu1) ...
+Processing triggers for ureadahead (0.100.0-21) ...
+Processing triggers for systemd (237-3ubuntu10.21) ...
+Processing triggers for ufw (0.36-0ubuntu0.18.04.1) ...
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ systemctl status apache2.service
+<font color="#EF2929"><b>●</b></font> apache2.service - The Apache HTTP Server
+   Loaded: loaded (/lib/systemd/system/apache2.service; enabled; vendor preset: enabled)
+  Drop-In: /lib/systemd/system/apache2.service.d
+           └─apache2-systemd.conf
+   Active: <font color="#EF2929"><b>failed</b></font> (Result: exit-code) since Wed 2019-05-22 21:26:14 +07; 33s ago
+
+Thg 5 22 21:26:14 localhost apachectl[9534]: AH00558: apache2: Could not reliably determine the server&apos;s fully qualified dom
+Thg 5 22 21:26:14 localhost apachectl[9534]: (98)Address already in use: AH00072: make_sock: could not bind to address [::]:
+Thg 5 22 21:26:14 localhost apachectl[9534]: (98)Address already in use: AH00072: make_sock: could not bind to address 0.0.0
+Thg 5 22 21:26:14 localhost apachectl[9534]: no listening sockets available, shutting down
+Thg 5 22 21:26:14 localhost apachectl[9534]: AH00015: Unable to open logs
+Thg 5 22 21:26:14 localhost apachectl[9534]: Action &apos;start&apos; failed.
+Thg 5 22 21:26:14 localhost apachectl[9534]: The Apache error log may have more information.
+Thg 5 22 21:26:14 localhost systemd[1]: <b>apache2.service: Control process exited, code=exited status=1</b>
+Thg 5 22 21:26:14 localhost systemd[1]: <b>apache2.service: Failed with result &apos;exit-code&apos;.</b>
+Thg 5 22 21:26:14 localhost systemd[1]: <font color="#EF2929"><b>Failed to start The Apache HTTP Server.</b></font>
+
+[1]+  Stopped                 systemctl status apache2.service
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ ^C
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ sudo kill -9 98
+kill: (98): No such process
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ grep -ri listen /etc/apache2
+<font color="#75507B">/etc/apache2/apache2.conf</font><font color="#06989A">:</font>#   supposed to determine <font color="#EF2929"><b>listen</b></font>ing ports for incoming connections which can be
+<font color="#75507B">/etc/apache2/apache2.conf</font><font color="#06989A">:</font># Include list of ports to <font color="#EF2929"><b>listen</b></font> on
+<font color="#75507B">/etc/apache2/ports.conf</font><font color="#06989A">:</font><font color="#EF2929"><b>Listen</b></font> 80
+<font color="#75507B">/etc/apache2/ports.conf</font><font color="#06989A">:</font>	<font color="#EF2929"><b>Listen</b></font> 443
+<font color="#75507B">/etc/apache2/ports.conf</font><font color="#06989A">:</font>	<font color="#EF2929"><b>Listen</b></font> 443
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ listen 80
+
+Command &apos;listen&apos; not found, but can be installed with:
+
+sudo apt install ruby-listen
+
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ netstat -ltnp | grep :80
+
+Command &apos;netstat&apos; not found, but can be installed with:
+
+sudo apt install net-tools
+
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ sudo netstat -tulpn | grep :80
+sudo: netstat: command not found
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ netstat -tulpn | grep :80
+
+Command &apos;netstat&apos; not found, but can be installed with:
+
+sudo apt install net-tools
+
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ netstat -tulpn | grep :80
+
+Command &apos;netstat&apos; not found, but can be installed with:
+
+sudo apt install net-tools
+
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ sudo netstat -tulpn | grep :80
+sudo: netstat: command not found
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ # apt-get install net-tools
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ apt-get install net-tools
+E: Could not open lock file /var/lib/dpkg/lock-frontend - open (13: Permission denied)
+E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), are you root?
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ ps aux | grep -i apt
+hieu      8504  0.0  0.0      0     0 tty2     Z+   21:24   0:00 [<font color="#EF2929"><b>apt</b></font>-key] &lt;defunct&gt;
+hieu     10416  0.0  0.0  23076  1104 pts/1    R+   21:34   0:00 grep --color=auto -i <font color="#EF2929"><b>apt</b></font>
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ sudo killall apt apt-get
+apt: no process found
+apt-get: no process found
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ sudo kill -9 8504
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ sudo kill -9 10416
+kill: (10416): No such process
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ ps aux | grep -i apt
+hieu      8504  0.0  0.0      0     0 tty2     Z+   21:24   0:00 [<font color="#EF2929"><b>apt</b></font>-key] &lt;defunct&gt;
+hieu     10482  0.0  0.0  23076  1088 pts/1    S+   21:35   0:00 grep --color=auto -i <font color="#EF2929"><b>apt</b></font>
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ apt-get install net-tools
+E: Could not open lock file /var/lib/dpkg/lock-frontend - open (13: Permission denied)
+E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), are you root?
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ lsof /var/lib/dpkg/lock
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ 
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ lsof /var/lib/apt/lists/lock
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ lsof /var/cache/apt/archives/lock
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ sudo kill -9 PID
+kill: failed to parse argument: &apos;PID&apos;
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ sudo rm /var/lib/apt/lists/lock
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ sudo rm /var/cache/apt/archives/lock
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ sudo rm /var/lib/dpkg/lock
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ sudo dpkg --configure -a
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ apt-get install net-tools
+E: Could not open lock file /var/lib/dpkg/lock-frontend - open (13: Permission denied)
+E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), are you root?
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ lsof /var/lib/dpkg/lock-frontend
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ sudo rm /var/lib/dpkg/lock-frontend
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ sudo dpkg --configure -a
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ sudo apt-get install net-tools
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following NEW packages will be installed:
+  net-tools
+0 upgraded, 1 newly installed, 0 to remove and 5 not upgraded.
+Need to get 194 kB of archives.
+After this operation, 803 kB of additional disk space will be used.
+Get:1 http://vn.archive.ubuntu.com/ubuntu bionic/main amd64 net-tools amd64 1.60+git20161116.90da8a0-1ubuntu1 [194 kB]
+Fetched 194 kB in 2s (79,5 kB/s)                                 
+Selecting previously unselected package net-tools.
+(Reading database ... 305553 files and directories currently installed.)
+Preparing to unpack .../net-tools_1.60+git20161116.90da8a0-1ubuntu1_amd64.deb ...
+Unpacking net-tools (1.60+git20161116.90da8a0-1ubuntu1) ...
+Processing triggers for man-db (2.8.3-2ubuntu0.1) ...
+Setting up net-tools (1.60+git20161116.90da8a0-1ubuntu1) ...
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ ps aux | grep -i apt
+hieu      8504  0.0  0.0      0     0 tty2     Z+   21:24   0:00 [<font color="#EF2929"><b>apt</b></font>-key] &lt;defunct&gt;
+hieu     10766  0.0  0.0  23076   968 pts/1    S+   21:36   0:00 grep --color=auto -i <font color="#EF2929"><b>apt</b></font>
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ sudo netstat -tulpn | grep :80
+tcp        0      0 0.0.0.0<font color="#EF2929"><b>:80</b></font>              0.0.0.0:*               LISTEN      7442/nginx: master  
+tcp6       0      0 ::<font color="#EF2929"><b>:80</b></font>                   :::*                    LISTEN      7442/nginx: master  
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ 
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ sudo kill -9 7442
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ sudo systemctl status apache2
+<font color="#EF2929"><b>●</b></font> apache2.service - The Apache HTTP Server
+   Loaded: loaded (/lib/systemd/system/apache2.service; enabled; vendor preset: enabled)
+  Drop-In: /lib/systemd/system/apache2.service.d
+           └─apache2-systemd.conf
+   Active: <font color="#EF2929"><b>failed</b></font> (Result: exit-code) since Wed 2019-05-22 21:26:14 +07; 11min ago
+
+Thg 5 22 21:26:14 localhost apachectl[9534]: AH00558: apache2: Could not reliably determine the server&apos;s fully qualified dom
+Thg 5 22 21:26:14 localhost apachectl[9534]: (98)Address already in use: AH00072: make_sock: could not bind to address [::]:
+Thg 5 22 21:26:14 localhost apachectl[9534]: (98)Address already in use: AH00072: make_sock: could not bind to address 0.0.0
+Thg 5 22 21:26:14 localhost apachectl[9534]: no listening sockets available, shutting down
+Thg 5 22 21:26:14 localhost apachectl[9534]: AH00015: Unable to open logs
+Thg 5 22 21:26:14 localhost apachectl[9534]: Action &apos;start&apos; failed.
+Thg 5 22 21:26:14 localhost apachectl[9534]: The Apache error log may have more information.
+Thg 5 22 21:26:14 localhost systemd[1]: <b>apache2.service: Control process exited, code=exited status=1</b>
+Thg 5 22 21:26:14 localhost systemd[1]: <b>apache2.service: Failed with result &apos;exit-code&apos;.</b>
+Thg 5 22 21:26:14 localhost systemd[1]: <font color="#EF2929"><b>Failed to start The Apache HTTP Server.</b></font>
+...skipping...
+<font color="#EF2929"><b>●</b></font> apache2.service - The Apache HTTP Server
+   Loaded: loaded (/lib/systemd/system/apache2.service; enabled; vendor preset: enabled)
+  Drop-In: /lib/systemd/system/apache2.service.d
+           └─apache2-systemd.conf
+   Active: <font color="#EF2929"><b>failed</b></font> (Result: exit-code) since Wed 2019-05-22 21:26:14 +07; 11min ago
+
+Thg 5 22 21:26:14 localhost apachectl[9534]: AH00558: apache2: Could not reliably determine the server&apos;s fully qualified dom
+Thg 5 22 21:26:14 localhost apachectl[9534]: (98)Address already in use: AH00072: make_sock: could not bind to address [::]:
+Thg 5 22 21:26:14 localhost apachectl[9534]: (98)Address already in use: AH00072: make_sock: could not bind to address 0.0.0
+Thg 5 22 21:26:14 localhost apachectl[9534]: no listening sockets available, shutting down
+Thg 5 22 21:26:14 localhost apachectl[9534]: AH00015: Unable to open logs
+Thg 5 22 21:26:14 localhost apachectl[9534]: Action &apos;start&apos; failed.
+Thg 5 22 21:26:14 localhost apachectl[9534]: The Apache error log may have more information.
+Thg 5 22 21:26:14 localhost systemd[1]: <b>apache2.service: Control process exited, code=exited status=1</b>
+Thg 5 22 21:26:14 localhost systemd[1]: <b>apache2.service: Failed with result &apos;exit-code&apos;.</b>
+Thg 5 22 21:26:14 localhost systemd[1]: <font color="#EF2929"><b>Failed to start The Apache HTTP Server.</b></font>
+<b>~</b>
+<b>~</b>
+<b>~</b>
+<b>~</b>
+<b>~</b>
+<b>~</b>
+<b>~</b>
+
+[2]+  Stopped                 sudo systemctl status apache2
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ sudo netstat -tulpn | grep :80
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ sudo netstat -tulpn | grep :80
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ sudo systemctl reload  apache2
+apache2.service is not active, cannot reload.
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ sudo apt update
+Hit:1 http://vn.archive.ubuntu.com/ubuntu bionic InRelease                           
+Get:2 http://security.ubuntu.com/ubuntu bionic-security InRelease [88,7 kB]<font color="#C4A000">          </font>
+Get:3 http://vn.archive.ubuntu.com/ubuntu bionic-updates InRelease [88,7 kB]
+Get:4 http://vn.archive.ubuntu.com/ubuntu bionic-backports InRelease [74,6 kB]<font color="#C4A000">       </font>
+Get:5 http://vn.archive.ubuntu.com/ubuntu bionic-updates/main amd64 Packages [617 kB]
+Get:6 http://vn.archive.ubuntu.com/ubuntu bionic-updates/main i386 Packages [517 kB]
+Fetched 1.386 kB in 5s (260 kB/s)<font color="#C4A000">                         </font>
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+5 packages can be upgraded. Run &apos;apt list --upgradable&apos; to see them.
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ sudo systemctl reload  apache2
+apache2.service is not active, cannot reload.
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ sudo systemctl status apache2
+<font color="#EF2929"><b>●</b></font> apache2.service - The Apache HTTP Server
+   Loaded: loaded (/lib/systemd/system/apache2.service; enabled; vendor preset: enabled)
+  Drop-In: /lib/systemd/system/apache2.service.d
+           └─apache2-systemd.conf
+   Active: <font color="#EF2929"><b>failed</b></font> (Result: exit-code) since Wed 2019-05-22 21:26:14 +07; 12min ago
+
+Thg 5 22 21:26:14 localhost apachectl[9534]: (98)Address already in use: AH00072: make_sock: could not bind to address 0.0.0
+Thg 5 22 21:26:14 localhost apachectl[9534]: no listening sockets available, shutting down
+Thg 5 22 21:26:14 localhost apachectl[9534]: AH00015: Unable to open logs
+Thg 5 22 21:26:14 localhost apachectl[9534]: Action &apos;start&apos; failed.
+Thg 5 22 21:26:14 localhost apachectl[9534]: The Apache error log may have more information.
+Thg 5 22 21:26:14 localhost systemd[1]: <b>apache2.service: Control process exited, code=exited status=1</b>
+Thg 5 22 21:26:14 localhost systemd[1]: <b>apache2.service: Failed with result &apos;exit-code&apos;.</b>
+Thg 5 22 21:26:14 localhost systemd[1]: <font color="#EF2929"><b>Failed to start The Apache HTTP Server.</b></font>
+Thg 5 22 21:37:46 localhost systemd[1]: <b>apache2.service: Unit cannot be reloaded because it is inactive.</b>
+Thg 5 22 21:38:18 localhost systemd[1]: <b>apache2.service: Unit cannot be reloaded because it is inactive.</b>
+
+[3]+  Stopped                 sudo systemctl status apache2
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ sudo systemctl restart apache2
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ 
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ sudo systemctl status apache2
+<font color="#8AE234"><b>●</b></font> apache2.service - The Apache HTTP Server
+   Loaded: loaded (/lib/systemd/system/apache2.service; enabled; vendor preset: enabled)
+  Drop-In: /lib/systemd/system/apache2.service.d
+           └─apache2-systemd.conf
+   Active: <font color="#8AE234"><b>active (running)</b></font> since Wed 2019-05-22 21:38:36 +07; 6s ago
+  Process: 11172 ExecStart=/usr/sbin/apachectl start (code=exited, status=0/SUCCESS)
+ Main PID: 11176 (apache2)
+    Tasks: 55 (limit: 4915)
+   CGroup: /system.slice/apache2.service
+           ├─11176 /usr/sbin/apache2 -k start
+           ├─11177 /usr/sbin/apache2 -k start
+           └─11178 /usr/sbin/apache2 -k start
+
+Thg 5 22 21:38:36 localhost systemd[1]: Starting The Apache HTTP Server...
+Thg 5 22 21:38:36 localhost apachectl[11172]: AH00558: apache2: Could not reliably determine the server&apos;s fully qualified do
+Thg 5 22 21:38:36 localhost systemd[1]: Started The Apache HTTP Server.
+
+[4]+  Stopped                 sudo systemctl status apache2
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ sudo ufw status
+Status: inactive
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ sudo ufw allow &apos;Apache&apos;
+Rules updated
+Rules updated (v6)
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ sudo ufw status
+Status: inactive
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ sudo ufw status
+Status: inactive
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ sudo ufw allow &apos;Apache&apos;
+Skipping adding existing rule
+Skipping adding existing rule (v6)
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ sudo ufw allow &apos;Apache&apos;
+Skipping adding existing rule
+Skipping adding existing rule (v6)
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ sudo ufw status
+Status: inactive
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ hostname -I
+192.168.1.109 2405:4800:54d7:fbff:290c:2253:c00f:6866 2405:4800:54d7:fbff:745b:fb61:dc7a:5037 
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ curl -4 cuoituan.me
+
+Command &apos;curl&apos; not found, but can be installed with:
+
+sudo apt install curl
+
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ sudo apt install curl
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  libcurl4
+The following packages will be REMOVED:
+  libcurl3
+The following NEW packages will be installed:
+  curl libcurl4
+0 upgraded, 2 newly installed, 1 to remove and 5 not upgraded.
+Need to get 373 kB of archives.
+After this operation, 392 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://vn.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libcurl4 amd64 7.58.0-2ubuntu3.7 [214 kB]
+Get:2 http://vn.archive.ubuntu.com/ubuntu bionic-updates/main amd64 curl amd64 7.58.0-2ubuntu3.7 [159 kB]
+Fetched 373 kB in 3s (107 kB/s)
+<b>dpkg:</b> libcurl3:amd64: dependency problems, but removing anyway as you requested:
+ atom depends on libcurl3 | libcurl4; however:
+  Package libcurl3:amd64 is to be removed.
+  Package libcurl4 is not installed.
+
+(Reading database ... 305600 files and directories currently installed.)
+Removing libcurl3:amd64 (7.58.0-2ubuntu2) ...
+Selecting previously unselected package libcurl4:amd64.
+(Reading database ... 305594 files and directories currently installed.)
+Preparing to unpack .../libcurl4_7.58.0-2ubuntu3.7_amd64.deb ...
+Unpacking libcurl4:amd64 (7.58.0-2ubuntu3.7) ...
+Selecting previously unselected package curl.
+Preparing to unpack .../curl_7.58.0-2ubuntu3.7_amd64.deb ...
+Unpacking curl (7.58.0-2ubuntu3.7) ...
+Setting up libcurl4:amd64 (7.58.0-2ubuntu3.7) ...
+Processing triggers for libc-bin (2.27-3ubuntu1) ...
+Processing triggers for man-db (2.8.3-2ubuntu0.1) ...
+Setting up curl (7.58.0-2ubuntu3.7) ...
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ sudo apt update
+Get:1 http://security.ubuntu.com/ubuntu bionic-security InRelease [88,7 kB]
+Hit:2 http://vn.archive.ubuntu.com/ubuntu bionic InRelease
+Hit:3 http://vn.archive.ubuntu.com/ubuntu bionic-updates InRelease<font color="#C4A000">                  </font>
+Get:4 http://vn.archive.ubuntu.com/ubuntu bionic-backports InRelease [74,6 kB]<font color="#C4A000">       </font>
+Fetched 163 kB in 3s (63,7 kB/s)<font color="#C4A000">                                      </font>
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+5 packages can be upgraded. Run &apos;apt list --upgradable&apos; to see them.
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ curl -4 cuoituan.me
+&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 3.2 Final//EN&quot;&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;title&gt;Index of /&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+&lt;h1&gt;Index of /&lt;/h1&gt;
+  &lt;table&gt;
+   &lt;tr&gt;&lt;th valign=&quot;top&quot;&gt;&amp;nbsp;&lt;/th&gt;&lt;th&gt;&lt;a href=&quot;?C=N;O=D&quot;&gt;Name&lt;/a&gt;&lt;/th&gt;&lt;th&gt;&lt;a href=&quot;?C=M;O=A&quot;&gt;Last modified&lt;/a&gt;&lt;/th&gt;&lt;th&gt;&lt;a href=&quot;?C=S;O=A&quot;&gt;Size&lt;/a&gt;&lt;/th&gt;&lt;th&gt;&lt;a href=&quot;?C=D;O=A&quot;&gt;Description&lt;/a&gt;&lt;/th&gt;&lt;/tr&gt;
+   &lt;tr&gt;&lt;th colspan=&quot;5&quot;&gt;&lt;hr&gt;&lt;/th&gt;&lt;/tr&gt;
+   &lt;tr&gt;&lt;th colspan=&quot;5&quot;&gt;&lt;hr&gt;&lt;/th&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/body&gt;&lt;/html&gt;
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ sudo mkdir -p /var/www/cuoituan.me/html
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ nano /var/www/example.com/html/index.html
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ sudo nano /var/www/example.com/html/index.html
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ sudo nano /var/www/cuoituan.me/html/index.html
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ sudo nano /etc/apache2/sites-available/cuoituan.me.conf
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ sudo a2ensite cuoituan.me.conf
+Enabling site cuoituan.me.
+To activate the new configuration, you need to run:
+  systemctl reload apache2
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ sudo systemctl reload apache2
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ sudo a2dissite 000-default.conf
+Site 000-default disabled.
+To activate the new configuration, you need to run:
+  systemctl reload apache2
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ sudo systemctl reload apache2
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ sudo apache2ctl configtest
+AH00558: apache2: Could not reliably determine the server&apos;s fully qualified domain name, using 127.0.0.1. Set the &apos;ServerName&apos; directive globally to suppress this message
+Syntax OK
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ sudo nano /etc/apache2/sites-available/cuoituan.me.conf
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ sudo a2ensite cuoituan.me.conf
+Site cuoituan.me already enabled
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ sudo systemctl reload apache2
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ sudo apache2ctl configtest
+AH00558: apache2: Could not reliably determine the server&apos;s fully qualified domain name, using 127.0.0.1. Set the &apos;ServerName&apos; directive globally to suppress this message
+Syntax OK
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ sudo nano /etc/apache2/sites-available/cuoituan.me.conf
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ sudo a2ensite cuoituan.me.conf
+Site cuoituan.me already enabled
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ sudo systemctl reload apache2
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ sudo systemctl restart apache2
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ sudo add-apt-repository ppa:certbot/certbot
+ This is the PPA for packages prepared by Debian Let&apos;s Encrypt Team and backported for Ubuntu(s).
+ More info: https://launchpad.net/~certbot/+archive/ubuntu/certbot
+Press [ENTER] to continue or Ctrl-c to cancel adding it.
+
+Get:1 http://security.ubuntu.com/ubuntu bionic-security InRelease [88,7 kB]                                  
+Get:2 http://ppa.launchpad.net/certbot/certbot/ubuntu bionic InRelease [21,3 kB]                             
+Hit:3 http://vn.archive.ubuntu.com/ubuntu bionic InRelease                                  
+Hit:4 http://vn.archive.ubuntu.com/ubuntu bionic-updates InRelease                                                    
+Get:5 http://vn.archive.ubuntu.com/ubuntu bionic-backports InRelease [74,6 kB]                                             
+Get:6 http://ppa.launchpad.net/certbot/certbot/ubuntu bionic/main i386 Packages [8.012 B]                  
+Get:7 http://ppa.launchpad.net/certbot/certbot/ubuntu bionic/main amd64 Packages [8.020 B]                                 
+Get:8 http://ppa.launchpad.net/certbot/certbot/ubuntu bionic/main Translation-en [4.200 B]           
+Fetched 205 kB in 3s (59,2 kB/s)            
+Reading package lists... Done
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ sudo apt install python-certbot-apache
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  augeas-lenses libaugeas0 python3-augeas python3-certbot-apache
+Suggested packages:
+  augeas-doc augeas-tools python-certbot-apache-doc
+The following NEW packages will be installed:
+  augeas-lenses libaugeas0 python-certbot-apache python3-augeas python3-certbot-apache
+0 upgraded, 5 newly installed, 0 to remove and 6 not upgraded.
+Need to get 542 kB of archives.
+After this operation, 2.706 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://vn.archive.ubuntu.com/ubuntu bionic/main amd64 augeas-lenses all 1.10.1-2 [300 kB]
+Get:2 http://ppa.launchpad.net/certbot/certbot/ubuntu bionic/main amd64 python3-augeas all 0.5.0-1+ubuntu18.04.1+certbot+1 [9.288 B]
+Get:3 http://ppa.launchpad.net/certbot/certbot/ubuntu bionic/main amd64 python3-certbot-apache all 0.31.0-1+ubuntu18.04.1+certbot+1 [69,7 kB]
+Get:4 http://vn.archive.ubuntu.com/ubuntu bionic/main amd64 libaugeas0 amd64 1.10.1-2 [159 kB]
+Get:5 http://ppa.launchpad.net/certbot/certbot/ubuntu bionic/main amd64 python-certbot-apache all 0.31.0-1+ubuntu18.04.1+certbot+1 [3.964 B]
+Fetched 542 kB in 3s (164 kB/s)<font color="#C4A000">                                                     </font>
+Selecting previously unselected package augeas-lenses.
+(Reading database ... 305607 files and directories currently installed.)
+Preparing to unpack .../augeas-lenses_1.10.1-2_all.deb ...
+Unpacking augeas-lenses (1.10.1-2) ...
+Selecting previously unselected package libaugeas0:amd64.
+Preparing to unpack .../libaugeas0_1.10.1-2_amd64.deb ...
+Unpacking libaugeas0:amd64 (1.10.1-2) ...
+Selecting previously unselected package python3-augeas.
+Preparing to unpack .../python3-augeas_0.5.0-1+ubuntu18.04.1+certbot+1_all.deb ...
+Unpacking python3-augeas (0.5.0-1+ubuntu18.04.1+certbot+1) ...
+Selecting previously unselected package python3-certbot-apache.
+Preparing to unpack .../python3-certbot-apache_0.31.0-1+ubuntu18.04.1+certbot+1_all.deb ...
+Unpacking python3-certbot-apache (0.31.0-1+ubuntu18.04.1+certbot+1) ...
+Selecting previously unselected package python-certbot-apache.
+Preparing to unpack .../python-certbot-apache_0.31.0-1+ubuntu18.04.1+certbot+1_all.deb ...
+Unpacking python-certbot-apache (0.31.0-1+ubuntu18.04.1+certbot+1) ...
+Processing triggers for libc-bin (2.27-3ubuntu1) ...
+Setting up augeas-lenses (1.10.1-2) ...
+Setting up libaugeas0:amd64 (1.10.1-2) ...
+Setting up python3-augeas (0.5.0-1+ubuntu18.04.1+certbot+1) ...
+Setting up python3-certbot-apache (0.31.0-1+ubuntu18.04.1+certbot+1) ...
+Setting up python-certbot-apache (0.31.0-1+ubuntu18.04.1+certbot+1) ...
+Processing triggers for libc-bin (2.27-3ubuntu1) ...
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ sudo apt update
+Get:1 http://security.ubuntu.com/ubuntu bionic-security InRelease [88,7 kB]
+Hit:2 http://vn.archive.ubuntu.com/ubuntu bionic InRelease                     
+Hit:3 http://ppa.launchpad.net/certbot/certbot/ubuntu bionic InRelease                                   
+Hit:4 http://vn.archive.ubuntu.com/ubuntu bionic-updates InRelease<font color="#C4A000">                                       </font>
+Get:5 http://vn.archive.ubuntu.com/ubuntu bionic-backports InRelease [74,6 kB]<font color="#C4A000">       </font>
+Fetched 163 kB in 3s (54,0 kB/s)<font color="#C4A000">                                      </font>
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+6 packages can be upgraded. Run &apos;apt list --upgradable&apos; to see them.
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ sudo nano /etc/apache2/sites-available/cuoituan.me.conf
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ sudo ufw status
+Status: inactive
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ sudo ufw allow &apos;Apache Full&apos;
+Rules updated
+Rules updated (v6)
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ sudo ufw delete  allow &apos;Apache&apos;
+Rules updated
+Rules updated (v6)
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ sudo ufw status
+Status: inactive
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ sudo certbot --apache -d cuoituan.me -d www.cuoituan.me
+Saving debug log to /var/log/letsencrypt/letsencrypt.log
+Plugins selected: Authenticator apache, Installer apache
+Obtaining a new certificate
+Performing the following challenges:
+http-01 challenge for cuoituan.me
+http-01 challenge for www.cuoituan.me
+Enabled Apache rewrite module
+Waiting for verification...
+Cleaning up challenges
+Failed authorization procedure. www.cuoituan.me (http-01): urn:ietf:params:acme:error:unauthorized :: The client lacks sufficient authorization :: Invalid response from http://www.cuoituan.me/.well-known/acme-challenge/gp3Ivt-CQh09y2s-s7cJgLRfdTFm5LRDi27R99PfI3k [198.54.126.166]: &quot;&lt;!DOCTYPE HTML PUBLIC \&quot;-//IETF//DTD HTML 2.0//EN\&quot;&gt;\n&lt;html&gt;&lt;head&gt;\n&lt;title&gt;404 Not Found&lt;/title&gt;\n&lt;/head&gt;&lt;body&gt;\n&lt;h1&gt;Not Found&lt;/h1&gt;\n&lt;p&quot;, cuoituan.me (http-01): urn:ietf:params:acme:error:unauthorized :: The client lacks sufficient authorization :: Invalid response from http://cuoituan.me/.well-known/acme-challenge/EcVGYsd65OzKLvu83dchg5ngTmZvJGlRkDDH9sOD4gc [198.54.126.166]: &quot;&lt;!DOCTYPE HTML PUBLIC \&quot;-//IETF//DTD HTML 2.0//EN\&quot;&gt;\n&lt;html&gt;&lt;head&gt;\n&lt;title&gt;404 Not Found&lt;/title&gt;\n&lt;/head&gt;&lt;body&gt;\n&lt;h1&gt;Not Found&lt;/h1&gt;\n&lt;p&quot;
+
+<b>IMPORTANT NOTES:</b>
+ - The following errors were reported by the server:
+
+   Domain: www.cuoituan.me
+   Type:   unauthorized
+   Detail: Invalid response from
+   http://www.cuoituan.me/.well-known/acme-challenge/gp3Ivt-CQh09y2s-s7cJgLRfdTFm5LRDi27R99PfI3k
+   [198.54.126.166]: &quot;&lt;!DOCTYPE HTML PUBLIC \&quot;-//IETF//DTD HTML
+   2.0//EN\&quot;&gt;\n&lt;html&gt;&lt;head&gt;\n&lt;title&gt;404 Not
+   Found&lt;/title&gt;\n&lt;/head&gt;&lt;body&gt;\n&lt;h1&gt;Not Found&lt;/h1&gt;\n&lt;p&quot;
+
+   Domain: cuoituan.me
+   Type:   unauthorized
+   Detail: Invalid response from
+   http://cuoituan.me/.well-known/acme-challenge/EcVGYsd65OzKLvu83dchg5ngTmZvJGlRkDDH9sOD4gc
+   [198.54.126.166]: &quot;&lt;!DOCTYPE HTML PUBLIC \&quot;-//IETF//DTD HTML
+   2.0//EN\&quot;&gt;\n&lt;html&gt;&lt;head&gt;\n&lt;title&gt;404 Not
+   Found&lt;/title&gt;\n&lt;/head&gt;&lt;body&gt;\n&lt;h1&gt;Not Found&lt;/h1&gt;\n&lt;p&quot;
+
+   To fix these errors, please make sure that your domain name was
+   entered correctly and the DNS A/AAAA record(s) for that domain
+   contain(s) the right IP address.
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ sudo systemctl restart apache2
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ certbot run -a webroot -i apache -w /var/www/cuoituan.me/.well-known/acme-challenge/ -d “new.mari-anna.info”
+/var/www/cuoituan.me/.well-known/acme-challenge/ does not exist or is not a directory
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ certbot run -a webroot -i apache2 -w /var/www/cuoituan.me/.well-known/acme-challenge/ -d “New update cucess”
+/var/www/cuoituan.me/.well-known/acme-challenge/ does not exist or is not a directory
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ sudo systemctl reload  apache2
+[sudo] password for hieu: 
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ sudo certbot --apache -d cuoituan.me -d www.cuoituan.me
+Saving debug log to /var/log/letsencrypt/letsencrypt.log
+Plugins selected: Authenticator apache, Installer apache
+Obtaining a new certificate
+Performing the following challenges:
+http-01 challenge for cuoituan.me
+http-01 challenge for www.cuoituan.me
+Enabled Apache rewrite module
+Waiting for verification...
+Cleaning up challenges
+Failed authorization procedure. www.cuoituan.me (http-01): urn:ietf:params:acme:error:unauthorized :: The client lacks sufficient authorization :: Invalid response from http://www.cuoituan.me/.well-known/acme-challenge/fB3JHkVzezeB5j6nxjDiCkKw8yQwTEq0utg-UFm-8n4 [198.54.126.166]: &quot;&lt;!DOCTYPE HTML PUBLIC \&quot;-//IETF//DTD HTML 2.0//EN\&quot;&gt;\n&lt;html&gt;&lt;head&gt;\n&lt;title&gt;404 Not Found&lt;/title&gt;\n&lt;/head&gt;&lt;body&gt;\n&lt;h1&gt;Not Found&lt;/h1&gt;\n&lt;p&quot;, cuoituan.me (http-01): urn:ietf:params:acme:error:unauthorized :: The client lacks sufficient authorization :: Invalid response from http://cuoituan.me/.well-known/acme-challenge/sHsxFXiQZHehWgE4aNebt-Rd9oyI9b_RcnlR5s6zC9Q [198.54.126.166]: &quot;&lt;!DOCTYPE HTML PUBLIC \&quot;-//IETF//DTD HTML 2.0//EN\&quot;&gt;\n&lt;html&gt;&lt;head&gt;\n&lt;title&gt;404 Not Found&lt;/title&gt;\n&lt;/head&gt;&lt;body&gt;\n&lt;h1&gt;Not Found&lt;/h1&gt;\n&lt;p&quot;
+
+<b>IMPORTANT NOTES:</b>
+ - The following errors were reported by the server:
+
+   Domain: www.cuoituan.me
+   Type:   unauthorized
+   Detail: Invalid response from
+   http://www.cuoituan.me/.well-known/acme-challenge/fB3JHkVzezeB5j6nxjDiCkKw8yQwTEq0utg-UFm-8n4
+   [198.54.126.166]: &quot;&lt;!DOCTYPE HTML PUBLIC \&quot;-//IETF//DTD HTML
+   2.0//EN\&quot;&gt;\n&lt;html&gt;&lt;head&gt;\n&lt;title&gt;404 Not
+   Found&lt;/title&gt;\n&lt;/head&gt;&lt;body&gt;\n&lt;h1&gt;Not Found&lt;/h1&gt;\n&lt;p&quot;
+
+   Domain: cuoituan.me
+   Type:   unauthorized
+   Detail: Invalid response from
+   http://cuoituan.me/.well-known/acme-challenge/sHsxFXiQZHehWgE4aNebt-Rd9oyI9b_RcnlR5s6zC9Q
+   [198.54.126.166]: &quot;&lt;!DOCTYPE HTML PUBLIC \&quot;-//IETF//DTD HTML
+   2.0//EN\&quot;&gt;\n&lt;html&gt;&lt;head&gt;\n&lt;title&gt;404 Not
+   Found&lt;/title&gt;\n&lt;/head&gt;&lt;body&gt;\n&lt;h1&gt;Not Found&lt;/h1&gt;\n&lt;p&quot;
+
+   To fix these errors, please make sure that your domain name was
+   entered correctly and the DNS A/AAAA record(s) for that domain
+   contain(s) the right IP address.
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ sudo certbot --apache -d cuoituan.me
+[sudo] password for hieu: 
+Saving debug log to /var/log/letsencrypt/letsencrypt.log
+Plugins selected: Authenticator apache, Installer apache
+Obtaining a new certificate
+Performing the following challenges:
+http-01 challenge for cuoituan.me
+Enabled Apache rewrite module
+Waiting for verification...
+Cleaning up challenges
+Failed authorization procedure. cuoituan.me (http-01): urn:ietf:params:acme:error:connection :: The server could not connect to the client to verify the domain :: dns :: DNS problem: SERVFAIL looking up A for cuoituan.me
+
+<b>IMPORTANT NOTES:</b>
+ - The following errors were reported by the server:
+
+   Domain: cuoituan.me
+   Type:   connection
+   Detail: dns :: DNS problem: SERVFAIL looking up A for cuoituan.me
+
+   To fix these errors, please make sure that your domain name was
+   entered correctly and the DNS A/AAAA record(s) for that domain
+   contain(s) the right IP address. Additionally, please check that
+   your computer has a publicly routable IP address and that no
+   firewalls are preventing the server from communicating with the
+   client. If you&apos;re using the webroot plugin, you should also verify
+   that you are serving files from the webroot path you provided.
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ sudo systemctl reload  apache2
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ sudo certbot --apache -d cuoituan.me
+Saving debug log to /var/log/letsencrypt/letsencrypt.log
+Plugins selected: Authenticator apache, Installer apache
+Obtaining a new certificate
+Performing the following challenges:
+http-01 challenge for cuoituan.me
+Enabled Apache rewrite module
+Waiting for verification...
+Cleaning up challenges
+Failed authorization procedure. cuoituan.me (http-01): urn:ietf:params:acme:error:unauthorized :: The client lacks sufficient authorization :: Invalid response from http://cuoituan.me/.well-known/acme-challenge/yH8MK6hLwNnCnZte2g1gUY-ZffuMAFFUF7pcspiSXc0 [198.54.126.166]: &quot;&lt;!DOCTYPE HTML PUBLIC \&quot;-//IETF//DTD HTML 2.0//EN\&quot;&gt;\n&lt;html&gt;&lt;head&gt;\n&lt;title&gt;404 Not Found&lt;/title&gt;\n&lt;/head&gt;&lt;body&gt;\n&lt;h1&gt;Not Found&lt;/h1&gt;\n&lt;p&quot;
+
+<b>IMPORTANT NOTES:</b>
+ - The following errors were reported by the server:
+
+   Domain: cuoituan.me
+   Type:   unauthorized
+   Detail: Invalid response from
+   http://cuoituan.me/.well-known/acme-challenge/yH8MK6hLwNnCnZte2g1gUY-ZffuMAFFUF7pcspiSXc0
+   [198.54.126.166]: &quot;&lt;!DOCTYPE HTML PUBLIC \&quot;-//IETF//DTD HTML
+   2.0//EN\&quot;&gt;\n&lt;html&gt;&lt;head&gt;\n&lt;title&gt;404 Not
+   Found&lt;/title&gt;\n&lt;/head&gt;&lt;body&gt;\n&lt;h1&gt;Not Found&lt;/h1&gt;\n&lt;p&quot;
+
+   To fix these errors, please make sure that your domain name was
+   entered correctly and the DNS A/AAAA record(s) for that domain
+   contain(s) the right IP address.
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ sudo systemctl restart  apache2
+<font color="#8AE234"><b>hieu@localhost</b></font>:<font color="#729FCF"><b>~</b></font>$ sudo -i
+root@localhost:~# sudo certbot --apache -d cuoituan.me -d www.cuoituan.me
+Saving debug log to /var/log/letsencrypt/letsencrypt.log
+Plugins selected: Authenticator apache, Installer apache
+Obtaining a new certificate
+Performing the following challenges:
+http-01 challenge for cuoituan.me
+http-01 challenge for www.cuoituan.me
+Enabled Apache rewrite module
+Waiting for verification...
+Cleaning up challenges
+Failed authorization procedure. www.cuoituan.me (http-01): urn:ietf:params:acme:error:unauthorized :: The client lacks sufficient authorization :: Invalid response from http://www.cuoituan.me/.well-known/acme-challenge/057T4gKzZX_IhcdueV7lQVn9J4zwaPaCPd2AEakckIk [198.54.126.166]: &quot;&lt;!DOCTYPE HTML PUBLIC \&quot;-//IETF//DTD HTML 2.0//EN\&quot;&gt;\n&lt;html&gt;&lt;head&gt;\n&lt;title&gt;404 Not Found&lt;/title&gt;\n&lt;/head&gt;&lt;body&gt;\n&lt;h1&gt;Not Found&lt;/h1&gt;\n&lt;p&quot;, cuoituan.me (http-01): urn:ietf:params:acme:error:unauthorized :: The client lacks sufficient authorization :: Invalid response from http://cuoituan.me/.well-known/acme-challenge/2EIBcu8Kqx6KmUZzw1BPHkXnl25yMx9oNndMs5HoNR0 [198.54.126.166]: &quot;&lt;!DOCTYPE HTML PUBLIC \&quot;-//IETF//DTD HTML 2.0//EN\&quot;&gt;\n&lt;html&gt;&lt;head&gt;\n&lt;title&gt;404 Not Found&lt;/title&gt;\n&lt;/head&gt;&lt;body&gt;\n&lt;h1&gt;Not Found&lt;/h1&gt;\n&lt;p&quot;
+
+<b>IMPORTANT NOTES:</b>
+ - The following errors were reported by the server:
+
+   Domain: www.cuoituan.me
+   Type:   unauthorized
+   Detail: Invalid response from
+   http://www.cuoituan.me/.well-known/acme-challenge/057T4gKzZX_IhcdueV7lQVn9J4zwaPaCPd2AEakckIk
+   [198.54.126.166]: &quot;&lt;!DOCTYPE HTML PUBLIC \&quot;-//IETF//DTD HTML
+   2.0//EN\&quot;&gt;\n&lt;html&gt;&lt;head&gt;\n&lt;title&gt;404 Not
+   Found&lt;/title&gt;\n&lt;/head&gt;&lt;body&gt;\n&lt;h1&gt;Not Found&lt;/h1&gt;\n&lt;p&quot;
+
+   Domain: cuoituan.me
+   Type:   unauthorized
+   Detail: Invalid response from
+   http://cuoituan.me/.well-known/acme-challenge/2EIBcu8Kqx6KmUZzw1BPHkXnl25yMx9oNndMs5HoNR0
+   [198.54.126.166]: &quot;&lt;!DOCTYPE HTML PUBLIC \&quot;-//IETF//DTD HTML
+   2.0//EN\&quot;&gt;\n&lt;html&gt;&lt;head&gt;\n&lt;title&gt;404 Not
+   Found&lt;/title&gt;\n&lt;/head&gt;&lt;body&gt;\n&lt;h1&gt;Not Found&lt;/h1&gt;\n&lt;p&quot;
+
+   To fix these errors, please make sure that your domain name was
+   entered correctly and the DNS A/AAAA record(s) for that domain
+   contain(s) the right IP address.
+root@localhost:~# 
+</pre>
